@@ -1,0 +1,5 @@
+name: CustomFood
+
+main: com.niccholaspage.CustomFood.CustomFood
+
+version: 0.1
