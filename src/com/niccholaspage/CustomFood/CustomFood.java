@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.event.Event;
@@ -28,10 +27,11 @@ public class CustomFood extends JavaPlugin {
 		PluginManager pm = getServer().getPluginManager();
 		//Create PlayerCommand listener
 	    pm.registerEvent(Event.Type.PLAYER_INTERACT, playerListener, Event.Priority.Normal, this);
+	    //Interactable blocks
 	    //Setup the Config
 	    setupConfig();
        //Get the infomation from the yml file.
-        PluginDescriptionFile pdfFile = this.getDescription();
+        PluginDescriptionFile pdfFile = getDescription();
         //Print that the plugin has been enabled!
         System.out.println(pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!");
 	}
