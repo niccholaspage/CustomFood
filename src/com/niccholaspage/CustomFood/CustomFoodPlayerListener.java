@@ -7,7 +7,7 @@ import org.bukkit.event.player.PlayerListener;
 import org.bukkit.inventory.ItemStack;
 
 public class CustomFoodPlayerListener extends PlayerListener{
-	 public static CustomFood plugin;
+	 public CustomFood plugin;
 	 public CustomFoodPlayerListener(CustomFood instance) {
 		 plugin = instance;
 	 }
@@ -22,7 +22,7 @@ public class CustomFoodPlayerListener extends PlayerListener{
 				 player.getInventory().remove(itemInHand);
 			 }else {
 				 itemInHand.setAmount(itemInHand.getAmount() - 1);
-			 }
+			 } 
 			 player.setHealth(player.getHealth() + plugin.healAmounts.get(plugin.items.indexOf(Id)));
 		 }
 	 }
