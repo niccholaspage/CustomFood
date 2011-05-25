@@ -23,8 +23,8 @@ public class CustomFoodPlayerListener extends PlayerListener{
 			Material.NOTE_BLOCK,
 			Material.WORKBENCH
 	};
-	 public CustomFoodPlayerListener(CustomFood instance) {
-		 plugin = instance;
+	 public CustomFoodPlayerListener(CustomFood plugin) {
+		 this.plugin = plugin;
 	 }
 	 public boolean contains(Object obj, Object[] objects){
 		 for (Object object : objects){
