@@ -27,11 +27,10 @@ public class CustomFoodPlayerListener extends PlayerListener{
 		 plugin = instance;
 	 }
 	 public boolean contains(Object obj, Object[] objects){
-		 boolean contains = false;
 		 for (Object object : objects){
-			 if (obj == object) contains = true;
+			 if (obj == object) return true;
 		 }
-		 return contains;
+		 return false;
 	 }
 	 public void onPlayerInteract(PlayerInteractEvent event){
 		 if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK){
