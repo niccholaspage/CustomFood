@@ -42,7 +42,7 @@ public class CustomFoodPlayerListener extends PlayerListener{
 			 Integer Id = itemInHand.getTypeId();
 			 if (!plugin.items.contains(Id)) return;
 			 if (itemInHand.getAmount() == 1){
-				 player.getInventory().remove(itemInHand);
+				 player.setItemInHand(null);
 			 }else {
 				 itemInHand.setAmount(itemInHand.getAmount() - 1);
 			 }
