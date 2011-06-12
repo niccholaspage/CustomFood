@@ -38,6 +38,7 @@ public class CustomFoodPlayerListener extends PlayerListener{
 			 Block block = event.getClickedBlock();
 			 if (block != null && contains(block.getType(), interactableBlocks)) return;
 			 if (player.getHealth() == 20) return;
+			 if (player.getVehicle() != null) return;
 			 ItemStack itemInHand = player.getItemInHand();
 			 Integer Id = itemInHand.getTypeId();
 			 if (!plugin.items.contains(Id)) return;

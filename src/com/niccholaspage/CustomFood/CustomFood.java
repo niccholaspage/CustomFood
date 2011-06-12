@@ -50,7 +50,7 @@ public class CustomFood extends JavaPlugin {
     	try {
 			file.createNewFile();
 		} catch (IOException e) {
-			
+			e.printStackTrace();
 		}
     	Configuration config = new Configuration(file);
     	config.load();
